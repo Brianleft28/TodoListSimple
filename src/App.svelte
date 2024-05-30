@@ -1,17 +1,16 @@
 <script>
-  let name = 'Svelte';
-  function changeName() {
-  if (name === 'Svelte') {
-    name = 'Mundo';
-} else {
-    name = 'Svelte';
-  }
-}
+  import { Router, Route } from 'svelte-routing';
+  import Layout from "./layouts/Layout.svelte";
+  import Home from './pages/Home.svelte';
+  import TaskBoard from './components/TaskBoard.svelte';
 
 
 </script>
-
-<div>
-  <h1>hola {name}</h1>
-  <button on:click={changeName}>Cambiar</button>
-</div>
+<Router>
+<Layout>
+    <Route path="/" component={Home} />
+    <Route path="/taskboard" component={TaskBoard} />
+  </Layout>
+</Router>
+<style>
+</style>
