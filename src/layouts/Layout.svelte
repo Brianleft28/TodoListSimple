@@ -1,13 +1,12 @@
 <script>
   import "../app.css";
-  import Header from "../components/Header.svelte";
+  import Navbar from "../components/Navbar.svelte";
+  import Header from "../components/Navbar.svelte";
 </script>
-
-<Header />
-<div class="contain-layout min-h-screen  text-base-content font-mono">
+<!-- Page Wrapper -->
+<main class="max-w-[1920px] mx-auto bg-base-100  overflow-hidden font-mono">
+  <!-- Navbar -->
+  <Navbar />
     <slot></slot>
-</div>
 
-<style>
-
-</style>
+</main>

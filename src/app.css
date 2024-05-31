@@ -1,3 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    @apply text-base-content
+}
+
+a {
+    @apply text-[20px] text-primary hover:text-primary/85 transition-all duration-300
+}
+
+li {
+    @apply p-4
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @apply text-primary w-full
+}
+
+
+.h1 {
+    @apply text-2xl lg:text-3xl leading-none
+}
+
+.h2 {
+    @apply text-[50px] leading-tight
+}
+
+.h2 {
+    @apply text-[25px]
+}
