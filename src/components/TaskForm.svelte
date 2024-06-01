@@ -1,6 +1,8 @@
 <script>
     export let title = '';
     export let description = '';
+      export let isEditing = false;
+
     import { createEventDispatcher } from "svelte";
     const dispatch = createEventDispatcher();
 
@@ -10,9 +12,9 @@
     }
 </script>
 
-<form on:submit={submitForm} class="form-control mx-auto w-full border-2 border-secondary/5  p-3 bg-base-100/15">
+<form on:submit={submitForm} class="form-control mx-auto w-full border-2 border-secondary/5   p-3 bg-base-100/15">
   
-    <div class="shadow-sm flex sm:gap-0 gap-3 lg:flex-row md:flex-row sm:flex-row flex-col justify-between ">
+    <div class=" shadow-sm flex sm:gap-0 gap-3 lg:flex-row md:flex-row sm:flex-row flex-col justify-between ">
         
         <input 
         bind:value={title} 
@@ -29,7 +31,10 @@
         <button 
         type="submit" 
         class="ml-1 btn btn-primary lg:max-w-xs">
-        Agregar tarea
+        
+        {
+            isEditing ? 'Editar Tarea' : 'Agregar Tarea'
+        }
         </button>
 
     </div>
