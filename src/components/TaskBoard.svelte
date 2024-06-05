@@ -71,6 +71,8 @@
   }
 </script>
 
+<!-- HTML -->
+
 <div class="container mx-auto flex flex-col justify-center mt-8">
   <TaskForm
     bind:isEditing
