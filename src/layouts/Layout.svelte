@@ -10,5 +10,5 @@
 
 <!-- Page Wrapper -->
 <main class="page-container">
-    <slot/>
+  <slot />
 </main>

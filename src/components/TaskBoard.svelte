@@ -1,14 +1,10 @@
 <script>
   import TaskForm from "./TaskForm.svelte";
-
-  </script>
-
+</script>
 
 <!-- Formulario -->
-  <TaskForm />
+<TaskForm />
+
 <!-- Tablero -->
-
- 
-
 <style>
 </style>
