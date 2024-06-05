@@ -1,8 +1,8 @@
-<script>
   import { writable } from 'svelte/store'
 
   function createTaskStore() {
     const tasks = JSON.parse(localStorage.getItem('tasks')) || []
+    
     const { subscribe, set, update } = writable(tasks || [])
 
     return {
@@ -19,7 +19,12 @@
           localStorage.setItem('tasks', JSON.stringify(tasks))
           return tasks
         }),
+        getTasks: () =>  {
+          return localStorage.getItem('tasks')
+        },
+      clearTasks: () => set([]),
+
     }
   }
+  
   export const taskStore = createTaskStore()
-</script>

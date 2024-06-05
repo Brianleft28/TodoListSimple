@@ -2,7 +2,6 @@
 </script>
 
 
-<!-- sd -->
 
 <div class="navbar-div">
     <a class="navbar-logo" href="/">TodoList</a>

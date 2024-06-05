@@ -1,13 +1,14 @@
 <script>
   import "../app.css";
-  import Navbar from "../components/Navbar.svelte";
+  import Navbar from "../components/UI/Navbar.svelte";
 </script>
-<!-- Page Wrapper -->
-<div class="w-full mx-auto font-mono">
+
+<!-- Navbar -->
+<div class="navbar-container">
   <Navbar />
 </div>
-<main class="max-w-[1920px] mx-auto bg-base-100  overflow-hidden font-mono">
-  <!-- Navbar -->
-    <slot></slot>
 
+<!-- Page Wrapper -->
+<main class="page-container">
+    <slot/>
 </main>

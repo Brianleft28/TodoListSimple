@@ -3,7 +3,19 @@
 @tailwind utilities;
 
 
-/* Standar CSS */
+
+/* Layout */
+/* ////// */
+/* Navbar Container */
+.navbar-container {
+  @apply w-full mx-auto font-mono
+}
+
+.page-container {
+  @apply max-w-[1920px] mx-auto bg-base-100 overflow-hidden font-mono
+}
+
+/* Standar CSS para etiquetas */
 body {
   @apply text-base-content;
 }
@@ -20,6 +32,11 @@ h6 {
   @apply text-primary w-full;
 }
 
+
+.container {
+  @apply mx-auto my-4
+}
+
 .h1 {
   @apply text-2xl lg:text-3xl leading-none w-full;
 }
@@ -32,8 +49,11 @@ h6 {
   @apply text-[25px];
 }
 
+
+
 /* Components */
 /* ////////// */
+
 /* Navbar */
 
 .navbar-div {
@@ -67,3 +87,18 @@ h6 {
 .navbar-item-ul li a {
   @apply px-5 mx-2
 }
+
+/* TaskForm */
+input {
+  @apply input w-full input-bordered;
+}
+
+button {
+  @apply btn btn-primary
+}
+
+.form {
+  @apply grid md:grid-cols-4 gap-2
+}
+
+/* TaskBoard */

@@ -4,16 +4,17 @@ export default {
   theme: {
     container: {
       padding: {
-        DEFAULT: "5rem",
-        sm: "2rem",
-        lg: "4rem",
+        DEFAULT: "2rem",
+        lg: "3.5rem",
         xl: "5rem",
       },
   },
+
+  
   screens: {
     sm: "640px",
     md: "768px",
-    lg: "1024px",
+    lg: "1080px",
     xl: "1280px",
   },
 
