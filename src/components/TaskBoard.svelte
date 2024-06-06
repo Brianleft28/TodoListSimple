@@ -1,10 +1,13 @@
 <script>
   import TaskForm from "./TaskForm.svelte";
+  import Task from "./Task.svelte";
 </script>
 
-<!-- Formulario -->
-<TaskForm />
-
-<!-- Tablero -->
-<style>
-</style>
+<div class="mt-20">
+  <!-- Formulario -->
+  <TaskForm />
+  <!-- Tablero -->
+  <div class="grid-container-task">
+    <Task />
+  </div>
+</div>

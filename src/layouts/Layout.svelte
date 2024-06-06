@@ -4,11 +4,11 @@
 </script>
 
 <!-- Navbar -->
-<div class="navbar-container">
-  <Navbar />
-</div>
 
 <!-- Page Wrapper -->
 <main class="page-container">
+  <div class="navbar-container">
+    <Navbar />
+  </div>
   <slot />
 </main>

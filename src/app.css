@@ -2,17 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 /* Layout */
 /* ////// */
 /* Navbar Container */
 .navbar-container {
-  @apply w-full mx-auto font-mono
+  @apply w-full mx-auto font-mono;
 }
 
 .page-container {
-  @apply max-w-[1920px] mx-auto bg-base-100 overflow-hidden font-mono
+  @apply max-w-[1920px] h-screen mx-auto bg-gradient-to-br from-base-100 via-base-200 to-base-300 pt-5 overflow-auto font-mono;
 }
 
 /* Standar CSS para etiquetas */
@@ -32,9 +30,8 @@ h6 {
   @apply text-primary w-full;
 }
 
-
 .container {
-  @apply mx-auto my-4
+  @apply mx-auto my-4;
 }
 
 .h1 {
@@ -49,43 +46,41 @@ h6 {
   @apply text-[25px];
 }
 
-
-
 /* Components */
 /* ////////// */
 
 /* Navbar */
 
 .navbar-div {
-  @apply max-w-[1920px] navbar justify-between bg-base-200
+  @apply fixed top-0 left-0 max-w-[1920px] navbar justify-between bg-base-200;
 }
 
 .navbar-logo {
-  @apply btn btn-ghost text-xl
+  @apply btn btn-ghost text-xl;
 }
 
 .navbar-dropdown {
-  @apply dropdown relative
+  @apply dropdown relative;
 }
 
 .navbar-dropdown-svg {
-  @apply btn btn-ghost lg:hidden
+  @apply btn btn-ghost lg:hidden;
 }
 
 .navbar-dropdown-ul {
-  @apply absolute right-0 menu gap-2 menu-sm mt-3 z-[1] p-2 shadow bg-base-200 rounded-box
+  @apply absolute right-0 menu gap-2 menu-sm mt-3 z-[1] p-2 shadow bg-base-200 rounded-box;
 }
 
 .navbar-item-div {
-  @apply hidden lg:flex
+  @apply hidden lg:flex;
 }
 
 .navbar-item-ul {
-  @apply menu menu-horizontal px-1
+  @apply menu menu-horizontal px-1;
 }
 
 .navbar-item-ul li a {
-  @apply px-5 mx-2
+  @apply px-5 mx-2;
 }
 
 /* TaskForm */
@@ -94,11 +89,64 @@ input {
 }
 
 button {
-  @apply btn btn-primary
+  @apply btn btn-primary;
 }
 
 .form {
-  @apply grid md:grid-cols-4 gap-2
+  @apply grid md:grid-cols-4 gap-2;
 }
 
 /* TaskBoard */
+
+/* GridContainerTask */
+.grid-container-task {
+  @apply h-auto font-sans w-full grid gap-2 grid-cols-1 mt-2 row-auto container;
+}
+
+/* Task Item */
+.task-item {
+  @apply p-3 shadow-sm bg-base-200 border-neutral-content/5 border-2 text-primary-content flex;
+}
+/* Div de los textos */
+.div-text-task {
+  @apply w-full m-2;
+}
+/* Contenido */
+.h1-task {
+  @apply font-bold mb-2;
+}
+
+.p-task {
+  @apply break-words max-w-[90%];
+}
+
+/* DIV BOTONES */
+.div-buttons {
+  @apply flex flex-row gap-3 items-center justify-end mx-1;
+}
+
+.btn-edit {
+  @apply btn  btn-primary max-w-sm;
+}
+
+.btn-delete {
+  @apply btn btn-error max-w-sm;
+}
+
+/* task edit modal */
+/* div fixed */
+.modal-div {
+  @apply fixed top-0 left-0 bg-black/50 h-full w-full;
+}
+
+.modal-div-content {
+  @apply grid grid-cols-3 gap-7 place-content-center h-full container w-[500px];
+}
+
+.modal-div-input {
+  @apply border-base-content/5 border-2 col-span-4 bg-neutral p-5 rounded-lg;
+}
+
+.modal-h1 {
+  @apply text-2xl text-neutral-content font-bold mb-5;
+}
