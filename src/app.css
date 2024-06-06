@@ -150,3 +150,15 @@ button {
 .modal-h1 {
   @apply text-2xl text-neutral-content font-bold mb-5;
 }
+
+.modal-label {
+  @apply block mb-2 text-sm font-medium text-neutral-content;
+}
+
+.modal-input {
+  @apply block mb-2 text-sm font-medium text-neutral-content;
+}
+
+.modal-div-buttons {
+  @apply flex flex-row justify-center items-center gap-2;
+}

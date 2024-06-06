@@ -13,28 +13,14 @@
       <h1 class="modal-h1">Editar tarea</h1>
       <form>
         <div class="mb-5">
-          <label
-            for="title"
-            class="block mb-2 text-sm font-medium text-neutral-content"
-            >Título</label
-          >
-          <input
-            type="text"
-            class="block mb-2 text-sm font-medium text-neutral-content"
-          />
+          <label for="title" class="modal-label">Título</label>
+          <input type="text" class="modal-input" />
         </div>
         <div class="mb-5">
-          <label
-            for="description"
-            class="block text-sm mb-2 font-medium text-neutral-content"
-            >Descripción</label
-          >
-          <input
-            type="text"
-            class="input-bordered input focus:border-none bg-base-200"
-          />
+          <label for="description" class="modal-label">Descripción</label>
+          <input type="text" class="modal-input" />
         </div>
-        <div class="flex flex-row justify-center items-center gap-2">
+        <div class="modal-div-buttons">
           <button type="submit" class="btn-edit"> Guardar </button>
           <button on:click={close} class="btn-delete">Cerrar</button>
         </div>
