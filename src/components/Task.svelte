@@ -1,10 +1,11 @@
 <script>
   import { onDestroy } from "svelte";
-  import { taskStore } from "../lib/store.js";
   import TaskEditModal from "./TaskEditModal.svelte";
+  import { taskStore } from "../lib/store.js";
 
   let tasks = [];
   let editModalOpen = false;
+  let taskToEdit = null;
 
   const unsubscribe = taskStore.subscribe((updatedTasks) => {
     tasks = updatedTasks;
@@ -15,6 +16,11 @@
   function deleteTask(id) {
     taskStore.deleteTask(id);
     taskStore.saveTasks();
+  }
+
+  function editTask(task) {
+    taskToEdit = tasks.find((t) => t.id === task.id);
+    editModalOpen = true;
   }
 </script>
 
@@ -35,9 +41,7 @@
       </div>
       <!-- Botones -->
       <div class="div-buttons">
-        <button on:click={() => (editModalOpen = true)} class="btn-edit"
-          >Editar</button
-        >
+        <button on:click={editTask(task)} class="btn-edit">Editar</button>
 
         <button on:click={deleteTask(task.id)} class="btn-delete"
           >Eliminar</button
@@ -47,5 +51,5 @@
   {/each}
 {/if}
 {#if editModalOpen}
-  <TaskEditModal on:close={() => (editModalOpen = false)} />
+  <TaskEditModal {taskToEdit} on:close={() => (editModalOpen = false)} />
 {/if}
